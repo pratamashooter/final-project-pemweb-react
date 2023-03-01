@@ -1,0 +1,5 @@
+export const PRODUCT_TYPES = {
+  SANDANG: "SANDANG",
+  PANGAN: "PANGAN",
+  PAKAN: "PAKAN",
+};
