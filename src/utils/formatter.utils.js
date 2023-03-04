@@ -36,7 +36,7 @@ export const getCurrencyFormat = (nominal) => {
 
   nominalParsed = nominalParsed.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
 
-  return `${nominalParsed} SR`;
+  return `Rp. ${nominalParsed}`;
 };
 
 export const getDateTimeFormat = (dateTime, format = "DD MMM YYYY, h:mm A") =>

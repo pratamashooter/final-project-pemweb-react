@@ -1,13 +1,13 @@
 import { lazy, Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 import Loading from "./routes/loading.route";
 
-const Main = lazy(() => import("./routes/main.route"));
-const MessagesPopup = lazy(() => import("./widgets/messages-popup.widget"));
+const Home = lazy(() => import("./routes/home.route"));
 const NotFound = lazy(() => import("./routes/not-found.route"));
 const Order = lazy(() => import("./routes/order.route"));
 const Product = lazy(() => import("./routes/product.route"));
+const Layout = lazy(() => import("./components/layout.component"));
 const Toast = lazy(() => import("./components/toast.component"));
 
 const App = () => {
@@ -15,12 +15,13 @@ const App = () => {
     <Suspense fallback={<Loading />}>
       <Toast />
       <Routes>
-        <Route path="/" element={<MessagesPopup />}>
-          <Route index element={<Main />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Navigate to="/home" />} />
+          <Route path="home" element={<Home />} />
           <Route path="product" element={<Product />} />
           <Route path="order" element={<Order />} />
-          <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
   );

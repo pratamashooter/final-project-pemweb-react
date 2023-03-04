@@ -1,12 +1,9 @@
-import { Outlet } from "react-router-dom";
-
-import ExamplePopup from "./example-popup.widget";
+import ProductPopup from "./product-popup.widget";
 
 const MessagesPopup = () => {
   return (
     <>
-      <ExamplePopup />
-      <Outlet />
+      <ProductPopup />
     </>
   );
 };
