@@ -9,7 +9,11 @@ export const REQUEST_METHODS = {
 };
 
 const defaultOptions = {
-  baseUrl: "http://localhost:8000/api",
+  // baseUrl: "http://localhost:8000/api",
+  // * SEMENTARA
+  baseUrl: "https://koyokoyo.kencang.id/final-project-pemweb-api/public/api",
+  // * NANTI
+  // baseUrl: "http://final-project-pemweb.api/api",
   headers: () => ({ "Content-Type": "application/json" }),
   error: {
     meta: {
