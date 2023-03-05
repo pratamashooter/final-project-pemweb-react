@@ -110,6 +110,7 @@ const OrderCreate = ({ products = [] }) => {
           },
         ],
       })
+      return
     } else if (inputValues.pay < totalPrice()) {
       showErrorMessage({
         data: [
@@ -118,6 +119,7 @@ const OrderCreate = ({ products = [] }) => {
           },
         ],
       })
+      return
     }
 
     const uangBeli = parseInt(inputValues.pay)

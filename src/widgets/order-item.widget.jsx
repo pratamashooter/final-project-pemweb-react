@@ -13,7 +13,7 @@ import { modalKey } from "./product-edit.widget"
 const OrderItem = ({ order }) => {
   const dispatch = useDispatch()
 
-  const { customer_name, code, order_product } = order ?? {}
+  const { customer_name, code, order_product, total, pay, change } = order ?? {}
 
   const productEditClickHandler = () => {
     dispatch(setProduct(order))
@@ -68,6 +68,17 @@ const OrderItem = ({ order }) => {
       ) : (
         <div>not found</div>
       )}
+      <div className="text-slate-600">
+        <div>
+          Total : {getCurrencyFormat(total)}
+        </div>
+        <div>
+          Bayar : {getCurrencyFormat(pay)}
+        </div>
+        <div>
+          Kembalian : {getCurrencyFormat(change)}
+        </div>
+      </div>
     </div>
   )
 }
