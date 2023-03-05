@@ -8,7 +8,7 @@ const Layout = () => {
     <>
       <MessagesPopup />
       <Sidenav />
-      <div className="ml-80 p-8">
+      <div className={`p-8 md:ml-80`}>
         <Outlet />
       </div>
     </>

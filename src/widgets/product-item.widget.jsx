@@ -7,6 +7,8 @@ import { setProduct } from "../store/product/product.action";
 
 import { modalKey } from "../widgets/product-edit.widget";
 
+import NoImage from "../assets/images/no-image.jpeg";
+
 const ProductItem = ({ product }) => {
   const dispatch = useDispatch();
 
@@ -20,7 +22,7 @@ const ProductItem = ({ product }) => {
 
   return (
     <div className="cursor-pointer bg-white hover:bg-white/50 p-6" onClick={productEditClickHandler}>
-      <img src={image} alt="Product Image" className="w-full aspect-video object-cover mb-3" />
+      <img src={image ?? NoImage} alt={name ?? "No Image"} className="w-full aspect-video object-cover mb-3" />
       <div className="flex items-start">
         <div className="grow">
           <h5 className="text-lg font-bold mb-1">{name ?? "No Name"}</h5>
