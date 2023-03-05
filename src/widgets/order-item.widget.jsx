@@ -68,11 +68,11 @@ const OrderItem = ({ order }) => {
       ) : (
         <div>not found</div>
       )}
-      <div className="text-slate-600">
+      <div className="text-slate-600 text-sm">
         <div>
           Total : {getCurrencyFormat(total)}
         </div>
-        <div>
+        <div className="py-1.5">
           Bayar : {getCurrencyFormat(pay)}
         </div>
         <div>
