@@ -20,7 +20,7 @@ const PageHeader = ({ title, description, toolbar }) => {
       >
         <MenuSvg className="w-6 h-6" />
       </button>
-      <header className="flex justify-between items-center flex-wrap">
+      <header className="flex justify-between items-center flex-wrap mb-4">
         <div className={`grow ${toolbar && "mr-4"}`}>
           <h3 className="text-2xl font-bold mb-2">{title}</h3>
           <p className="text-base text-slate-500 leading-relaxed mb-8">{description}</p>
