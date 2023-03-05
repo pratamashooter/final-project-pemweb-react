@@ -19,12 +19,7 @@ export const sidenavMenus = [
   },
   {
     path: "/order",
-    name: "Create Order",
-    description: "Provident veniam laudantium et inventore saepe vitae.",
-  },
-  {
-    path: "/report",
-    name: "Order Report",
+    name: "Manage Order",
     description: "Provident veniam laudantium et inventore saepe vitae.",
   },
 ];
